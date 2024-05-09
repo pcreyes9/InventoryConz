@@ -1,22 +1,25 @@
 <?php
 
-use App\Http\Livewire\Auth\ForgotPassword;
-use App\Http\Livewire\Auth\Login;
-use App\Http\Livewire\Auth\Register;
-use App\Http\Livewire\Auth\ResetPassword;
-use App\Http\Livewire\Billing;
-use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Dashboard;
-use App\Http\Livewire\ExampleLaravel\UserManagement;
-use App\Http\Livewire\ExampleLaravel\UserProfile;
-use App\Http\Livewire\Notifications;
-use App\Http\Livewire\Profile;
 use App\Http\Livewire\RTL;
+use GuzzleHttp\Middleware;
+use App\Http\Livewire\Recipe;
+use App\Http\Livewire\Tables;
+use App\Http\Livewire\Billing;
+use App\Http\Livewire\Profile;
+use App\Http\Livewire\Products;
+use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Auth\Login;
+use App\Http\Livewire\Ingredients;
 use App\Http\Livewire\StaticSignIn;
 use App\Http\Livewire\StaticSignUp;
-use App\Http\Livewire\Tables;
+use App\Http\Livewire\Auth\Register;
+use App\Http\Livewire\Notifications;
 use App\Http\Livewire\VirtualReality;
-use GuzzleHttp\Middleware;
+use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Auth\ResetPassword;
+use App\Http\Livewire\Auth\ForgotPassword;
+use App\Http\Livewire\ExampleLaravel\UserProfile;
+use App\Http\Livewire\ExampleLaravel\UserManagement;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,8 +59,9 @@ Route::get('static-sign-up', StaticSignUp::class)->name('static-sign-up');
 Route::get('rtl', RTL::class)->name('rtl');
 
 // main project
-Route::get('ingredients', Tables::class)->name('ingredients');
-Route::get('products', [Tables::class, 'products'])->name('products');
-Route::get('recipe', Tables::class)->name('recipe');
+// Route::get('ingredients', Tables::class)->name('ingredients');
+Route::get('ingredients', Ingredients::class)->name('ingredients');
+Route::get('products', Products::class)->name('products');
+Route::get('recipe', Recipe::class)->name('recipe');
 
 });

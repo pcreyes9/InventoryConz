@@ -42,8 +42,8 @@
 
         {{ $slot }}
 
-        <x-footers.auth></x-footers.auth>
+        {{-- <x-footers.auth></x-footers.auth> --}}
     </main>
-    <x-plugins></x-plugins>
+    {{-- <x-plugins></x-plugins> --}}
     @endif
 </x-layouts.base>
